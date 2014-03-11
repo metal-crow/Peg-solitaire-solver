@@ -82,10 +82,7 @@ writespace(N) :-
 	
 
 
-maketri(Base,_,Base,Fin,Fin,_).% :-
-	%BwW is Base+(Base-1),
-	%write2dtri(Fin,BwW,0),nl,
-	%goto2dindex(Fin,BwW,1,2,0,0,X).%indexs start at 0
+maketri(Base,_,Base,Fin,Fin,_).
 	
 	%start 0,	start 1
 maketri(Numsinrowcount,Numsinrow,Base,FinArray,X,Default) :-
@@ -136,20 +133,6 @@ usermakes2dboard(Inprogress,Endsignal,Final) :-
 	write('Enter ''_''. for empty spaces, !. to finish '),
 	read(I),
 	usermakes2dboard([I|Inprogress],I,Final).
-	
-/*sportjump(Array) :-
-	Array = [
-		'_','_','_','_','_','_',1,'_',1,'_',1,'_','_','_','_','_','_',
-		'_','_','_','_','_','_',1,'_',1,'_',1,'_','_','_','_','_','_',
-		'_','_','_','_','_','_',1,'_',1,'_',1,'_','_','_','_','_','_',
-		 1, '_', 1, '_', 1, '_',1,'_',1,'_',1,'_', 1, '_', 1, '_', 1,
-		 1, '_', 1, '_', 1, '_',1,'_',1,'_',1,'_', 1, '_', 1, '_', 1,
-		 1, '_', 1, '_', 1, '_',1,'_',1,'_',1,'_', 1, '_', 1, '_', 1,
-		'_','_','_','_','_','_',1,'_',1,'_',1,'_','_','_','_','_','_',
-		'_','_','_','_','_','_',1,'_',1,'_',1,'_','_','_','_','_','_',
-		'_','_','_','_','_','_',1,'_',1,'_',1,'_','_','_','_','_','_'
-		].
-	*/
 	
 sportjump(Array) :-
 	Array = [
